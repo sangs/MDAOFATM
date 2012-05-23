@@ -1,0 +1,28 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package com.hw.edu.iit;
+
+/**
+ *
+ * @author Owner
+ */
+public class Activate extends ATMState {
+
+  Activate() {
+
+  }
+
+  void balanceBelowMin(CardStateTransitions st) {
+    st.setStateTo(st.CARD_OVERDRAWN_STATE);
+  }
+
+  void balanceAboveMin(CardStateTransitions st) {
+    st.setStateTo(st.CARD_READY_STATE);
+  }
+
+
+  
+}
